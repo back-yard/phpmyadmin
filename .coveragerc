@@ -1,0 +1,6 @@
+[run]
+source = ./phpmyadmin
+omit = ./phpmyadmin/__init__.py
+       ./phpmyadmin/commandline.py
+       ./venv/*
+       ./test/__init__.py
