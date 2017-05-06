@@ -1,0 +1,9 @@
+-r prod.txt
+
+virtualenv
+flake8
+nose
+radon
+codecov
+codevalidator
+twine
