@@ -56,16 +56,13 @@ setup(
 
     install_requires=['docker'],
 
-    extras_require={
-        'dev': ['flake8'],
-        'test': ['coverage'],
-    },
-
     package_data={
-        'sample': ['package_data.dat'],
+        # 'sample': ['package_data.dat'],
     },
 
-    data_files=[('my_data', ['data/data_file'])],
+    data_files=[
+        # ('my_data', ['data/data_file'])
+    ],
 
     entry_points={
         'console_scripts': [
