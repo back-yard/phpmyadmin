@@ -54,7 +54,7 @@ setup(
 
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
-    install_requires=['docker'],
+    install_requires=['docker', 'termcolor'],
 
     package_data={
         # 'sample': ['package_data.dat'],
