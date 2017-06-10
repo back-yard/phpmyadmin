@@ -69,3 +69,47 @@ def pull_image(image_name, version='latest'):
         return False
 
 
+def get_container(image_name, version='latest'):
+    client = get_docker_client()
+    for container in client.containers.list():
+        print(container.attrs['Config']['Image'])
+        print('%s:version' % [image_name, version])
+        if container.attrs['Config']['Image'] == '%s:%s' % (image_name, version):
+            return container
+    return False
+
+
+def run_container(image_name, version='latest'):
+    client = get_docker_client()
+    for container in client.containers.list():
+        print(container.attrs['Config']['Image'])
+        print('%s:version' % [image_name, version])
+        if container.attrs['Config']['Image'] == '%s:%s' % (image_name, version):
+            container.start()
+            return True
+
+    client.containers.run('%s:%s' % (image_name, version))
+
+
+def stop_container(image_name, version='latest'):
+    client = get_docker_client()
+    for container in client.containers.list():
+        print(container.attrs['Config']['Image'])
+        print('%s:version' % [image_name, version])
+        if container.attrs['Config']['Image'] == '%s:%s' % (image_name, version):
+            container.stop()
+            return True
+
+    return True
+
+
+def delete_container(image_name, version='latest'):
+    client = get_docker_client()
+    for container in client.containers.list():
+        print(container.attrs['Config']['Image'])
+        print('%s:version' % [image_name, version])
+        if container.attrs['Config']['Image'] == '%s:%s' % (image_name, version):
+            container.kill()
+            return True
+
+    return True
