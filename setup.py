@@ -20,7 +20,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/iboneyard/phpmyadmin',
+    url='https://github.com/iBoneYard/phpmyadmin',
 
     # Author details
     author='indrajit',
