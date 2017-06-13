@@ -57,10 +57,10 @@ def pull_image(image_name, version='latest'):
         print
         print("##########################################################")
         print(colored("You can create an issue in the github repository at:", 'yellow'))
-        print(colored("https://github.com/eendroroy/phpmyadmin/issues", 'blue'))
+        print(colored("https://github.com/iBoneYard/phpmyadmin/issues", 'blue'))
         print
         print(colored('If you are a developer, please checkout the codebase at:', 'yellow'))
-        print(colored("https://github.com/eendroroy/phpmyadmin/", 'blue'))
+        print(colored("https://github.com/iBoneYard/phpmyadmin/", 'blue'))
         print
         print(colored("Pull requests are always welcomed :)", 'green'))
         print("##########################################################")
