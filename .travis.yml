@@ -11,5 +11,5 @@ install:
   - pip install -r requirements/test.txt
   - pip install .
 # command to run tests
-script: 'nosetests'
-after-success: 'codecov'
+script: 'nosetests --with-coverage --cover-package=phpmyadmin'
+after-success: 'codecov --token=8c2efec6-7cf6-48f7-9f69-e4a83867b410'
